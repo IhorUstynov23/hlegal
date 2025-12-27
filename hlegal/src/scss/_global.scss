@@ -1,0 +1,28 @@
+body {
+	font-family: 'Montserrat';
+	background: $main-color;
+	color: $main-color;
+	font-size: 14px;
+	transition: background .2s ease, color .2s ease;
+	@include viewport-md {
+		font-size: 10px;
+	}
+}
+
+.wrapper {
+	min-height: 100vh;
+	min-width: 375px;
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.title {
+	font-size: 25px;
+	text-align: center;
+}
