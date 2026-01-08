@@ -1,0 +1,237 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 101;
+  &__container {
+    padding: 0;
+    @media (min-width: 768px) {
+      padding: 50px;
+    }
+  }
+  &-navigate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    @media (min-width: 768px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+    }
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    img {
+      @media (min-width: 375px) {
+        width: 70px;
+      }
+      @media (min-width: 768px) {
+        width: 130px;
+      }
+      @media (min-width: 1024px) {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        right: 0;
+      }
+    }
+  }
+  .header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(245, 245, 250, 0.2);
+    padding: 10px 15px;
+    a {
+      color: $link-color;
+    }
+    address {
+      color: $link-color;
+    }
+    @media (min-width: 768px) {
+      background: none;
+      justify-content: flex-start;
+      font-size: $base-fz;
+      gap: 10px;
+
+      & address {
+        &::after {
+          content: "\25CF";
+          color: $link-color;
+          padding-left: 10px;
+        }
+      }
+      & .header__info-link {
+        &::after {
+          content: "\25CF";
+          color: $link-color;
+          padding-left: 10px;
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & .logo-breadcrumb {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 250px;
+      font-size: 36px;
+      color: $link-color;
+      @media (min-width: 375px) {
+        font-size: 20px;
+        left: 90px;
+        top: 52px;
+      }
+      @media (min-width: 768px) {
+        font-size: 36px;
+        top: 100px;
+        left: 205px;
+      }
+      @media (min-width: 1024px) {
+        top: 55px;
+        left: 200px;
+      }
+      &::before {
+        content: "/";
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 5px;
+        color: $accent-color;
+        @media (min-width: 768px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  .menu {
+    position: relative;
+    &__list {
+      position: fixed;
+      bottom: 0;
+      left: 8px;
+      right: 8px;
+      text-align: center;
+      border-radius: 12px 12px 0 0;
+      padding: 64px 12px 12px;
+      transition: transform 0.2s linear;
+      transform: translateY(110%);
+      background: $link-color;
+      z-index: 100;
+      &.active {
+        transform: translateY(0);
+      }
+      @media (min-width: 768px) {
+        position: static;
+        display: flex;
+        transition: none;
+        transform: none;
+        background: none;
+        gap: 10px;
+        padding: 0;
+      }
+    }
+    &__item {
+      font-size: $base-fz;
+      font-weight: 700;
+      text-align: center;
+      background: $bg-lang-switch;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      padding: 6px 7px 7px 7px;
+      @media (min-width: 768px) {
+        background: none;
+      }
+    }
+    &__link {
+      @media (min-width: 768px) {
+        color: $link-color;
+        &:hover {
+          color: $link-color;
+          border-bottom: 2px solid $link-color;
+        }
+        &--active {
+          color: $accent-color;
+          border-bottom: 2px solid $accent-color;
+        }
+      }
+    }
+    &__burger {
+      width: 32px;
+      height: 32px;
+      font-size: 25px;
+      color: #fff;
+      background-color: $main-color;
+      &:hover {
+        background-color: rgba(245, 245, 250, 0.2);
+        border-radius: 8px;
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+    &__btnclose {
+      background-color: $link-color;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+      &:hover {
+        color: $accent-color;
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .lang-list {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 12px;
+    color: $link-color;
+
+    &__link {
+      display: inline-block;
+      padding: 5px 7px;
+      color: $text-lang-switch;
+      border-radius: 8px;
+      &--active {
+        background-color: $accent-color;
+        color: $text-active-lang-switch;
+      }
+      &:hover {
+        color: $link-color;
+      }
+
+      &:hover:not(.lang-list__link--active) {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: $link-color;
+      }
+    }
+    @media (min-width: 768px) {
+      &::after {
+        display: flex;
+        align-items: center;
+        content: "\25CF";
+        color: #fff;
+      }
+    }
+  }
+}

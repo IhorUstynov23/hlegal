@@ -1,0 +1,94 @@
+.intro {
+  background-image: url(../img/hlegal-main.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  position: relative;
+  min-height: 100vh;
+  padding: 150px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //
+  &__head {
+    font-size: 38px;
+    font-weight: 700;
+    color: $link-color;
+    text-align: center;
+  }
+  &__anchor {
+    width: 42px;
+    height: 42px;
+    border: 2px solid $link-color;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-left: 8px;
+   padding-right: 2px;
+    &::after {
+      display: inline-block;
+      content: ">";
+      font-size: 42px;
+      transform: rotate(89deg);
+      color: $link-color;
+    }
+    &:hover {
+      border: 2px solid rgba(240, 20, 90, 1);
+    }
+    &:hover::after {
+      color: $accent-color;
+    }
+  }
+}
+.e-commerce__container {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .e-commerce__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 92px;
+    background-color: $link-color;
+    border-radius: 24px;
+    margin-top: 60px;
+  }
+  & .e-commerce__head {
+    font-size: 30px;
+    font-weight: 700;
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 30px 0;
+    @media (min-width:768px) {
+      font-size: 38px;
+    }
+  }
+  & .e-commerce__text {
+    font-family: $base-ff;
+    font-size: 19px;
+    color: $link-color;
+    line-height: 1.6;
+    text-align: center;
+  }
+  & .e-commerce__button{
+    background-color: $active-regular-color;
+    padding: 18px 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    & .e-commerce__link{
+      color: $link-color;
+      font-size: $base-fz;
+      font-weight: 700;
+    }
+  }
+}

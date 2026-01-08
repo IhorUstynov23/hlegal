@@ -11,3 +11,17 @@
   font-weight: 700;
 	font-display: swap;
 }
+@font-face{
+  font-family: "Montserrat";
+  src: url("../fonts/icomoon.woff") format('woff');
+}
+
+.icon-th-menu:before {
+  content: "\e904";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-close:before {
+  content: "\e900";
+}

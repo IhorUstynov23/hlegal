@@ -1,0 +1,37 @@
+.it-services {
+  border-top: 4px solid $main-text-color;
+  display: flex;
+  flex-direction: column;
+  &__head {
+    font-size: 22px;
+    font-weight: 700;
+    color: $link-color;
+    padding: 30px 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    color: $link-color;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    list-style-type: disc;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      column-gap: 60px;
+      grid-auto-flow: column;
+    }
+    & .it-services__item {
+      padding: 15px 0;
+      @media (min-width:768px) {
+        padding: 0;
+      }
+      &::marker {
+        color: $accent-color;
+        font-size: 20px;
+      }
+    }
+  }
+}

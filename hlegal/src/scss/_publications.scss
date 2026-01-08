@@ -1,0 +1,114 @@
+.publications__section {
+  display: flex;
+  flex-direction: column;
+  background: $bg-lang-switch;
+  margin-top: 60px;
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $burger-bg-active;
+    margin: 30px 0;
+  }
+  & .publications__header {
+    display: flex;
+    flex-direction: column;
+    &-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: $active-regular-color;
+      padding-top: 30px;
+      text-transform: uppercase;
+      &::after {
+        content: ">";
+        padding-left: 3px;
+        padding-top: 4px;
+        font-size: 14px;
+      }
+    }
+    &-head {
+      font-size: 30px;
+      font-weight: 700;
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 15px 0;
+      @media (min-width: 768px) {
+        font-size: 38px;
+      }
+    }
+  }
+  & .publications__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @media (min-width: 1024px) {
+      flex-wrap: nowrap;
+    }
+    & .publications__item {
+      width: 315px;
+      display: flex;
+      flex-direction: column;
+      background-color: $link-color;
+      border-radius: 12px;
+      &-img{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      @media (min-width: 768px) {
+        width: 309px;
+        &:nth-child(3n) {
+          width: 648px;
+        }
+        @media (min-width: 1024px) {
+          width: 282px;
+          &:nth-child(3n) {
+            width: 282px;
+          }
+        }
+        @media (min-width: 1440px) {
+          width: 420px;
+          &:nth-child(3n) {
+            width: 420px;
+          }
+        }
+        & img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &-link {
+        font-size: $base-fz;
+        font-weight: 700;
+        padding: 30px 30px 15px 30px;
+      }
+      &-date {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $text-lang-switch;
+        font-weight: 700;
+        padding: 0 30px 15px 30px;
+      }
+      &-text {
+        font-size: 14px;
+        color: $second-color;
+        line-height: 1.6;
+        padding: 15px 30px 30px 30px;
+        &::before {
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 4px;
+          background-color: $burger-bg-active;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

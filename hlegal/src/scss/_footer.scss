@@ -1,0 +1,85 @@
+.footer {
+  font-size: $base-fz;
+  background-color: $bg-lang-switch;
+
+  &__link {
+    .icon-facebook {
+      font-size: 22px;
+      padding: 8px;
+      text-align: center;
+      color: $link-color;
+      background-color: $active-regular-color;
+      border-radius: 50%;
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
+  }
+  &__container {
+    padding-bottom: 30px;
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: $main-color;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      & address::after{
+        content: '\25CF';
+        color: $text-lang-switch;
+        padding-left: 10px;
+      }
+    }
+    @media (min-width: 1024px) {
+      justify-content: flex-start;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      & .footer__link--tel{
+        &::after{
+          content: '\25CF';
+          color: $text-lang-switch;
+          padding-left: 15px;
+        }
+        &::before{
+          content: "\25CF";
+          color: $text-lang-switch;
+          padding-right: 15px;
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      justify-content: flex-start;
+    }
+  }
+  .footer__copyright {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    color: $text-lang-switch;
+    @media (min-width: 1024px) {
+      padding-right: 15px;
+    }
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

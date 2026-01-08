@@ -1,12 +1,20 @@
 $main-color:  #323264;
-$second-color: #161618;
+$second-color: #000000;
 $mute-color: #313136;
-$main-text-color: rgba(255, 255, 245, .86);
-$second-text-color: rgba(235, 235, 245, .6);
-$hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+$main-text-color: rgba(255, 255, 255, 0.3);
+$second-text-color: rgba(235, 235, 245, 0.6);
+$hero-name-background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 $brand-color: #646cff;
 $brand-light-color: #747bff;
+$active-regular-color: #24A3FF;
+$accent-color:#F0145A;
+$bg-lang-switch:#F5F5FA;
+$text-lang-switch:#B3B3BA;
+$text-active-lang-switch:#FFFFFF;
+$burger-bg-active:#E6E6F0;
+$link-color:#fff;
+$bg-command-section: #EDEDF7;
 
-$base-fz: 14px;
-$base-lh: 1.2; 
+$base-fz: 16px;
+$base-lh: 1.2;
 $base-ff: "Montserrat", sans-sarif;
