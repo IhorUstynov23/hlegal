@@ -3,7 +3,7 @@
   margin-bottom: 100px;
   &__wrapper {
     border-radius: 12px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
  
   &__slide {
@@ -43,12 +43,11 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
-    & .teams__link {
+     .teams__link {
       text-transform: uppercase;
       font-size: 14px;
       color: $active-regular-color;
       font-weight: 700;
-      padding-bottom: 10px;
       &::after {
         content: ">";
         font-size: 14px;
@@ -77,5 +76,11 @@
       color: $text-lang-switch;
       font-size: 14px;
     }
+  }
+}
+.swiper-pagination{
+  &-bullet{
+    width: 16px;
+    height: 16px;
   }
 }

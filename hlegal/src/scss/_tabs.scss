@@ -16,6 +16,7 @@
     overflow: auto;
     border-bottom: 4px solid $main-text-color;
     padding-bottom: 40px;
+    gap: 20px;
     @media (min-width: 1024px) {
       gap: 30px;
       text-align: right;
@@ -31,7 +32,6 @@
   }
 
   &__link {
-    padding: 0 20px;
     cursor: pointer;
     h2 {
       font-size: 30px;
@@ -44,8 +44,8 @@
     &--active {
       h2 {
         background: linear-gradient(270deg, #f0145a 0.84%, #ef8080 99.96%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
         font-weight: 700;
       }
     }
@@ -74,6 +74,9 @@
       font-size: 20px;
       font-weight: 700;
       padding-bottom: 30px;
+      @media (min-width:768px) {
+        font-size: 30px;
+      }
     }
     &-paragraph {
       font-size: 19px;

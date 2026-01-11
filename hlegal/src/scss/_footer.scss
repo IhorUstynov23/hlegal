@@ -1,7 +1,10 @@
 .footer {
   font-size: $base-fz;
   background-color: $bg-lang-switch;
-
+  padding-top: 30px;
+  @media (min-width:768px) {
+    padding-top: 30px;
+  }
   &__link {
     .icon-facebook {
       font-size: 22px;
@@ -32,8 +35,8 @@
     @media (min-width: 768px) {
       flex-direction: row;
       justify-content: center;
-      & address::after{
-        content: '\25CF';
+      & address::after {
+        content: "\25CF";
         color: $text-lang-switch;
         padding-left: 10px;
       }
@@ -51,13 +54,13 @@
     @media (min-width: 768px) {
       flex-direction: row;
       justify-content: center;
-      & .footer__link--tel{
-        &::after{
-          content: '\25CF';
+      & .footer__link--tel {
+        &::after {
+          content: "\25CF";
           color: $text-lang-switch;
           padding-left: 15px;
         }
-        &::before{
+        &::before {
           content: "\25CF";
           color: $text-lang-switch;
           padding-right: 15px;

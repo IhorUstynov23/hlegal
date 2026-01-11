@@ -14,43 +14,58 @@
     font-weight: 700;
     color: $link-color;
     text-align: center;
+    max-width: 50%;
   }
-  &__anchor {
-    width: 42px;
-    height: 42px;
-    border: 2px solid $link-color;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 8px;
-    padding-right: 2px;
-    &::after {
-      display: inline-block;
-      content: ">";
-      font-size: 42px;
-      transform: rotate(89deg);
-      color: $link-color;
+    &__anchor {
+      width: 42px;
+      height: 42px;
+      border: 2px solid $link-color;
+      position: absolute;
+      border-radius: 50%;
+      top: 90%;
+      left: 45%;
+       
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 52%;
+        left: 60%;
+        width: 14px;
+        height: 2px;
+        background-color: $link-color;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(130deg);
+      }
+
+      &::after {
+        transform: translate(-112%, -50%) rotate(47deg);
+      }
+      &:hover {
+        border-color: $accent-color;
+        &::after,
+        &::before{
+          background-color: $accent-color;
+        }
+    
+      }
     }
-    &:hover {
-      border: 2px solid rgba(240, 20, 90, 1);
-    }
-    &:hover::after {
-      color: $accent-color;
-    }
-  }
 }
+
 .e-commerce__container {
   position: relative;
   min-height: 100vh;
-  padding: 100px 15px;
+  padding: 200px 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (min-width:768px) {
+    padding: 300px 15px 0;
+  }
   .e-commerce__img {
     display: flex;
     align-items: center;
@@ -59,14 +74,14 @@
     height: 92px;
     background-color: $link-color;
     border-radius: 24px;
-    margin-top: 60px;
+
   }
   .e-commerce__head {
     font-size: 30px;
     font-weight: 700;
     background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     text-align: center;
     padding: 30px 0;
     @media (min-width: 768px) {
@@ -79,12 +94,13 @@
     color: $link-color;
     line-height: 1.6;
     text-align: center;
+    padding-bottom: 10px;
   }
   .e-commerce__button {
     background-color: $active-regular-color;
     padding: 18px 30px;
     border-radius: 12px;
-    margin: 30px 0;
+    margin: 30px 0 60px 0; 
     .e-commerce__link {
       color: $link-color;
       font-size: $base-fz;
